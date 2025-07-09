@@ -1,0 +1,47 @@
+<!-- Save this as frontend/guide.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Guide</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>📘 User Guide - Smart Transaction Fraud Detection</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="guide.html">User Guide</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="guide">
+    <h2>💡 How It Works</h2>
+    <p>This app detects whether a credit card transaction is fraudulent using machine learning. It uses patterns in transaction data to classify them as either <b>fraud</b> or <b>safe</b>.</p>
+
+    <h2>📌 Input Features Explained:</h2>
+    <ul>
+      <li><strong>Transaction Amount</strong>: Total money being transferred. Extremely high values often indicate fraud.</li>
+      <li><strong>Old Sender Balance</strong>: Amount in the sender's account before the transaction.</li>
+      <li><strong>New Sender Balance</strong>: Amount remaining after the transaction. If zero, it may signal account draining.</li>
+      <li><strong>Transaction Type</strong>: Can be <b>TRANSFER</b> (0) or <b>CASH_OUT</b> (1). Most frauds occur in these types.</li>
+      <li><strong>Is Flagged Fraud?</strong>: 1 if the system has pre-flagged it due to unusual amount, else 0.</li>
+    </ul>
+
+    <h2>⚠️ How Credit Card Frauds Happen:</h2>
+    <p>Fraudsters often:
+      <ul>
+        <li>Use stolen credentials to transfer or cash out funds.</li>
+        <li>Drain accounts by emptying sender balance completely.</li>
+        <li>Make high-value or rapid multiple transactions.</li>
+      </ul>
+    </p>
+
+    <h2>🛡️ How This App Helps:</h2>
+    <p>Using machine learning (Random Forest and upcoming LSTM+Transformer), the app evaluates the risk using patterns, helping banks or users stop suspicious transactions in real-time.</p>
+  </main>
+</body>
+</html>

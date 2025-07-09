@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fraud Detector</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+</head>
+<body>
+  <header>
+    <h1>💳 Smart Transaction Fraud Detection</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/guide">User Guide</a>
+      <a href="/dashboard">Dashboard</a>
+    </nav>
+  </header>
+
+  <main>
+    <form id="predict-form">
+      <div id="input-grid">
+        <input type="number" placeholder="Old Sender Balance" title="Amount of money transferred" class="input-field" />
+        <input type="number" placeholder="Transaction Amount" title="Balance of sender before transaction" class="input-field" />
+        <input type="number" placeholder="New Sender Balance" title="Balance of sender after transaction" class="input-field" />
+        <select class="input-field" title="Transaction Type: 0=TRANSFER, 1=CASH_OUT">
+          <option value="">Select Transaction Type</option>
+          <option value="0">TRANSFER</option>
+          <option value="1">CASH_OUT</option>
+        </select>
+        <select class="input-field" title="Flag if amount is suspicious (1=yes, 0=no)">
+          <option value="">Is Flagged Fraud?</option>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+      <button type="submit">Predict</button>
+    </form>
+
+    <div id="result"></div>
+    <div id="explanation"></div>
+  </main>
+</body>
+</html>
